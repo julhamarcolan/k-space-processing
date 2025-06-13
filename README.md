@@ -12,8 +12,6 @@ Understanding how spatial frequencies are distributed in k-space is essential:
 
 🧠 Periphery of k-space: Contains high spatial frequencies, responsible for edges, details, and fine structures.
 
-Refer to the diagram below (source: educational MRI content) for a visual understanding:
-
 ## 🛠 Requirements
 
 To run the script, you need the following Python packages:
@@ -26,4 +24,5 @@ You can download a test dataset containing example k-space data from the link be
 
 **[Download Test Dataset](https://drive.google.com/drive/folders/14-C4XG2RXxJ6UIR2E59yeX-NDFvfbpIq?usp=sharing)**
 
+🔗 IXI Dataset
 Place the k_space.npy file in the same directory as the script before running it.
