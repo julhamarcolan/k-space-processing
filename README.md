@@ -1,8 +1,8 @@
-K-Space  and MRI Image Reconstruction
+# K-Space  and MRI Image Reconstruction
 
 This repository contains a Python script for  k-space data processing (frequency domain) and reconstructing MRI images using low-pass and high-pass filtering techniques. It also includes visualizations comparing original, high-frequency, and low-frequency reconstructions.
 
-🔬 What is K-space?
+## 🔬 What is K-space?
 
 In Magnetic Resonance Imaging (MRI), k-space is a matrix that stores the raw frequency-encoded data captured during a scan. This frequency information is not an image by itself, but a spatial frequency representation of the object. Applying an inverse Fourier transform to k-space data generates the actual MRI image in the spatial domain.
 
@@ -14,13 +14,13 @@ Understanding how spatial frequencies are distributed in k-space is essential:
 
 Refer to the diagram below (source: educational MRI content) for a visual understanding:
 
-🛠 Requirements
+## 🛠 Requirements
 
 To run the script, you need the following Python packages:
 
 pip install numpy matplotlib
 
-📁 Data
+## 📁 Data
 
 You can download a test dataset containing example k-space data from the link below:
 
