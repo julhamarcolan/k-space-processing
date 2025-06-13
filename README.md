@@ -1,6 +1,9 @@
 # K-Space  and MRI Image Reconstruction
 
-This repository contains a Python script for  k-space data processing (frequency domain) and reconstructing MRI images using low-pass and high-pass filtering techniques. It also includes visualizations comparing original, high-frequency, and low-frequency reconstructions.
+This repository contains  Python scripts for  k-space data processing (frequency domain) and reconstructing MRI images.
+
+    - Manipulation of k-space using low-pass and high-pass filtering techniques.
+    - Zero-filling applied to the data to enhance image detail.
 
 ## 🔬 What is K-space?
 
