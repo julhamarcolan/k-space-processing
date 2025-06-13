@@ -19,6 +19,7 @@ def reconstruct_image(k_space):
 
 # Load original k-space
 k_space = np.load('k_space.npy')
+print(k_space.shape)
 
 image_data =  reconstruct_image(k_space)
 
@@ -31,7 +32,7 @@ plt.title("Original K-space")
 plt.axis('off')
 
 plt.subplot(1, 2, 2)
-plt.imshow(image_data, cmap='gray')
+plt.imshow(np.rot90(image_data), cmap='gray')
 plt.title("Reconstructed Image")
 plt.axis('off')
 

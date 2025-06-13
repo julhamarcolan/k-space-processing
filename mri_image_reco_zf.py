@@ -82,12 +82,12 @@ plt.title("Zero-Filled K-space")
 plt.axis('off')
 
 plt.subplot(2, 2, 3)
-plt.imshow(image_data, cmap='gray')
+plt.imshow(np.rot90(image_data), cmap='gray')
 plt.title("Reconstructed Image (Original)")
 plt.axis('off')
 
 plt.subplot(2, 2, 4)
-plt.imshow(image_data_zf, cmap='gray')
+plt.imshow(np.rot90(image_data_zf), cmap='gray')
 plt.title("Reconstructed Image (Zero-Filled)")
 plt.axis('off')
 

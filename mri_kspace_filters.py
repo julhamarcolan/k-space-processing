@@ -59,15 +59,14 @@ def keep_central_frequencies(k_space, radius):
 
 # Load original k-space
 k_space = np.load('k_space.npy')
-
 image_original = reconstruct_image(k_space)
 
 # High-pass filter (removes central frequencies)
-k_space_highpass = remove_central_frequencies(k_space, radius=20)
+k_space_highpass = remove_central_frequencies(k_space, radius=30)
 image_highpass = reconstruct_image(k_space_highpass)
 
 # Low-pass filter (keeps only central frequencies)
-k_space_lowpass = keep_central_frequencies(k_space, radius=20)
+k_space_lowpass = keep_central_frequencies(k_space, radius=30)
 image_lowpass = reconstruct_image(k_space_lowpass)
 
 # --- Plotting ---
@@ -89,17 +88,17 @@ plt.title('Low-pass K-space')
 plt.axis('off')
 
 plt.subplot(2, 3, 4)
-plt.imshow(image_original, cmap='gray')
+plt.imshow(np.rot90(image_original), cmap='gray')
 plt.title('Original Image')
 plt.axis('off')
 
 plt.subplot(2, 3, 5)
-plt.imshow(image_highpass, cmap='gray')
+plt.imshow(np.rot90(image_highpass), cmap='gray')
 plt.title('High-pass Image')
 plt.axis('off')
 
 plt.subplot(2, 3, 6)
-plt.imshow(image_lowpass, cmap='gray')
+plt.imshow(np.rot90(image_lowpass), cmap='gray')
 plt.title('Low-pass Image')
 plt.axis('off')
 

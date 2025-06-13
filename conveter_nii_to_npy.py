@@ -22,9 +22,12 @@ nifti_path = "IXI039-HH-1261-IXIDE3Diso_-s3T116_-0401-00004-000001-01.nii"
 
 image_data = convert_nifti_to_numpy(nifti_path)
 
-fft_result = fft2(image_data[:,:,60])
+slice_data = image_data[:, :, 60]
+normalized_slice = slice_data / np.max(slice_data)
+
+
+fft_result = fft2(normalized_slice)
 k_space = fftshift(fft_result)
-k_space = np.rot90(k_space)
 np.save('k_space.npy', k_space)
 
 
@@ -37,7 +40,7 @@ plt.title("Original K-space")
 plt.axis('off')
 
 plt.subplot(1, 2, 2)
-plt.imshow(np.rot90(np.abs(image_data[:,:,60])), cmap='gray')
+plt.imshow(np.rot90(np.abs(normalized_slice)), cmap='gray')
 plt.title("Reconstructed Image")
 plt.axis('off')
 
