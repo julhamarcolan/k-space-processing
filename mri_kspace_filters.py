@@ -77,8 +77,10 @@ plt.imshow(np.log(np.abs(k_space) + 1), cmap='gray')
 plt.title('Original K-space')
 plt.axis('off')
 
+vmin = 0
+vmax = np.log(np.abs(k_space).max() + 1)
 plt.subplot(2, 3, 2)
-plt.imshow(np.log(np.abs(k_space_highpass) + 1), cmap='gray')
+plt.imshow(np.log(np.abs(k_space_highpass) + 1), cmap='gray', vmin=vmin, vmax=vmax)
 plt.title('High-pass K-space')
 plt.axis('off')
 
