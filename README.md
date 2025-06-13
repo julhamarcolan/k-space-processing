@@ -4,6 +4,7 @@ This repository contains  Python scripts for  k-space data processing (frequency
 
     - Manipulation of k-space using low-pass and high-pass filtering techniques.
     - Zero-filling applied to the data to enhance image detail.
+    - Script for converting a NIfTI (.nii) file to a NumPy (.npy) file.
 
 ## 🔬 What is K-space?
 
@@ -29,4 +30,9 @@ You can download a test dataset containing example k-space data from the link be
 
 🔗 IXI Dataset
 
-Place the k_space.npy file in the same directory as the script before running it.
+## 🩻 Usage
+
+You can use the "k_space.npy" file directly.
+To do so, place the k_space.npy file in the same directory as the script before running it.
+
+If you prefer to use the available NIfTI (.nii) file or any other from the IXI Dataset, first run the script "convert_nii_to_npy.py" to generate a compatible NumPy file.
